@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 SHELL ["time"]
 
 # workaround for apk failing to update
-RUN sed -i 's/https/http/' /etc/apk/repositories
+RUN sed -i "s/https/http/" /etc/apk/repositories
 RUN apk add --no-cache alpine-sdk gcc linux-headers ncurses-dev librtlsdr-dev cmake libusb-dev
 
 ADD https://api.github.com/repos/weetmuts/wmbusmeters/git/refs/heads/master version.json
