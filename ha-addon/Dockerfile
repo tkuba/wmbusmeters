@@ -2,6 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM AS build
 
 ENV LANG C.UTF-8
+SHELL []
 
 # workaround for apk failing to update
 RUN sed -i 's/https/http/' /etc/apk/repositories
