@@ -1,5 +1,5 @@
 ARG BUILD_FROM
-FROM alpine:latest AS build
+FROM $BUILD_FROM AS build
 
 ENV LANG C.UTF-8
 SHELL ["#(nop)"]
