@@ -2,6 +2,7 @@ ARG BUILD_FROM
 FROM alpine:latest AS build
 
 ENV LANG C.UTF-8
+SHELL [""]
 
 # workaround for apk failing to update
 RUN apk add --no-cache alpine-sdk gcc linux-headers ncurses-dev librtlsdr-dev cmake libusb-dev
